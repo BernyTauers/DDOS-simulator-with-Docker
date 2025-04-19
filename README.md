@@ -33,10 +33,25 @@ ddos-simulator/ ├── docker-compose.yml ├── server/ │ ├── Doc
 
 ---
 
-## 🛠️ How to Use It
+##  How to Use It
 
 1. Clone this repository:
    ```bash
    git clone https://github.com/BernyTauers/DDOS-simulator-with-Docker.git
    cd DDOS-simulator-with-Docker
    ```
+
+2. Create a network
+   ```bash
+   docker network create --subnet 192.168.0.0/24 --gateway 192.168.0.1 ddos_network
+   ```
+3. Launch the enviorment
+   ```bash
+   docker-compose up --build -d
+   ```
+4. Monitor Traffic
+```bash
+docker exec -it nginx_server bash
+apt update && apt install -y iftop
+iftop -i eth0
+```
