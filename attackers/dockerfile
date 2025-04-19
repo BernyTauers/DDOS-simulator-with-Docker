@@ -1,0 +1,7 @@
+FROM leplusorg/kali:latest
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt update && apt install -y hping3
+
+CMD ["hping3", "--icmp", "-p", "80", "192.168.0.10"]

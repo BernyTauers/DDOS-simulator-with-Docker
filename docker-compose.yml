@@ -1,0 +1,44 @@
+version: '3.8'
+services:
+  nginx_server:
+    build: ./server
+    container_name: nginx_server
+    ports:
+      - "3000:80"
+    networks:
+      ddos_network:
+          ipv4_address: 192.168.0.10
+    
+  bot1:
+    build: ./attackers
+    container_name: bot1
+    networks:
+      ddos_network:
+        ipv4_address: 192.168.0.20
+    tty: true
+    stdin_open: true
+
+  bot2:
+    build: ./attackers
+    container_name: bot2
+    networks:
+      ddos_network:
+        ipv4_address: 192.168.0.21
+    tty: true
+    stdin_open: true
+
+
+  bot3:
+    build: ./attackers
+    container_name: bot3
+    networks:
+      ddos_network: 
+        ipv4_address: 192.168.0.22
+    tty: true
+    stdin_open: true
+
+      
+networks:
+  ddos_network:
+    external: true
+
