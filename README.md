@@ -19,3 +19,24 @@ This project simulates a distributed denial-of-service (DDoS) attack in a contro
 
 ddos-simulator/ ├── docker-compose.yml ├── server/ │ ├── Dockerfile │ ├── index.html │ └── style.css ├── attackers/ │
 
+
+##  What This Project Does
+
+- Simulates a **botnet** using multiple attacking containers (`bot1`, `bot2`, `bot3`.)
+- Performs attack types:
+  -  **TCP SYN Flood**
+  -  **UDP Flood**
+  -  **ICMP Flood**
+- Provides live network traffic monitoring via `iftop`
+- Uses a custom Docker network for realistic container communication
+  
+
+---
+
+## 🛠️ How to Use It
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/BernyTauers/DDOS-simulator-with-Docker.git
+   cd DDOS-simulator-with-Docker
+   ```
