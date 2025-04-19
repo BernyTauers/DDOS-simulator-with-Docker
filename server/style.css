@@ -1,0 +1,28 @@
+h1 {
+    color: #3984cf;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+/* Estilo para los párrafos */
+p {
+   
+    width: 200px;
+    color: #34495e;
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Georgia', serif;
+    margin: 10px 20px;
+}
+
+/* Estilo para los saltos de línea */
+br {
+    margin-bottom: 20px;
+}

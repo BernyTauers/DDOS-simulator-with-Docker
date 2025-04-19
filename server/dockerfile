@@ -1,0 +1,13 @@
+# Official Image of Nginx
+FROM nginx:stableapline
+
+#While the contariner is running, i need vim to see if the index and style are the correct ones
+RUN apt update && apt install vim -y
+
+COPY index.html /usr/share/nginx/html/index.html 
+COPY style.css /usr/share/nginx/html/style.css
+
+EXPOSE 80
+#
+
+
